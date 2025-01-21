@@ -24,6 +24,10 @@
     align-items: center;
     padding: 20px 0 20px 0;
 }
+.icon{
+    font-size: 2rem;
+    display: none;
+}
 .logo{
     display: flex;
     align-items: center;
@@ -105,12 +109,14 @@ body{
     border: none;
     cursor: pointer;
 }
+
+main{
+    background-image: url(assets/bg.png), linear-gradient(to bottom, rgb(247,247,247), rgb(247,247,247), rgb(247,247,247),
+    #fce2ba);
+}
 /* standard curriculum css */
 
-.bg-image{
-    background-image: url(assets/bg.png);
-    /* background-color: rgb(247,247,247); */
-}
+
 .title{
     font-size: 2.9rem;
     font-weight: bold;
@@ -136,10 +142,9 @@ body{
 /* card 1 */
 
 .bg-color{
-    background-image: linear-gradient(to bottom, rgba(222, 245, 255, 1), #ffff);
+    background-image: linear-gradient(to bottom, rgba(222, 245, 255, 1), #ffff, #ffff);
     width: 340px;
     height: 400px;
-    /* text-align: center; */
     display: flex;
     align-items: center;
     justify-items: center;
@@ -157,7 +162,7 @@ body{
 /* card 2 */
 
 .bg-color-2{
-    background-image: linear-gradient(to bottom, #FFF4DC, #ffff);
+    background-image: linear-gradient(to bottom, #FFF4DC, #ffff, #ffff);
     width: 340px;
     height: 400px;
     display: flex;
@@ -177,7 +182,7 @@ body{
 /* card 3 */
 
 .bg-color-3{
-    background-image: linear-gradient(to bottom, #F2E8FF, #ffff);
+    background-image: linear-gradient(to bottom, #F2E8FF, #ffff, #ffff);
     width: 340px;
     height: 400px;
     display: flex;
@@ -210,11 +215,7 @@ body{
     text-align: center;
 }
 /* our stories css */
-.stories-bg{
-    background-image: url(assets/bg.png);
-    /* background: linear-gradient( to bottom, #FFFFFF, #ffeed4, 
-    #fce2ba); */
-}
+
 .stories{
     display: flex;
     justify-content: space-between;
@@ -302,7 +303,7 @@ body{
 }
 .third-btn{
     text-align: center;
-    margin-bottom: 80px;
+    padding-bottom: 80px;
 }
 
 /* footer css */
@@ -347,6 +348,15 @@ footer p{
 
 /* responsive css */
 @media screen  and (max-width: 576px) {
+    .navbar ul li, .btn{
+        display: none;
+    }
+    .icon{
+        display: block;
+    }
+    nav{
+        border-bottom: 1px solid orange;
+    }
     .banner{
      flex-direction: column-reverse;
      
@@ -373,11 +383,10 @@ footer p{
         gap: 35px;
     }
     .round-button,
-    .navbar,
     .stories-big-card{
         display: none;
     }
-    .stories{
+    .stories, .footer{
         flex-direction: column;
     }
     .stories-small-card{
@@ -395,5 +404,8 @@ footer p{
     font-size: 10px;
     left: 20px;
     
+   }
+   .footer h4{
+    margin-top: 20px;
    }
 }
